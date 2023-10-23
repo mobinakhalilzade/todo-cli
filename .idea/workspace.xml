@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a89ab69-723c-4fa6-8dc6-ad99aec9ebe3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/constant/serialization_mode.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contract/user_store.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity/category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity/task.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entity/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/filestore/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/memorystore/category.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/memorystore/task.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/task/task.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/tcpserver/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
