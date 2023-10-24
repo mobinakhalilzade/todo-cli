@@ -11,12 +11,19 @@ import (
 
 func main() {
 	fmt.Println("command", os.Args[0])
-	message := "default"
-	if len(os.Args) > 1 {
-		message = os.Args[1]
+
+	if len(os.Args) < 2 {
+		log.Fatalln("You should set the ip address of server")
 	}
 
-	connection, err := net.Dial("tcp", "127.0.0.1:8000")
+	serverAddress := os.Args[1]
+
+	message := "default"
+	if len(os.Args) > 2 {
+		message = os.Args[2]
+	}
+
+	connection, err := net.Dial("tcp", serverAddress)
 
 	if err != nil {
 		log.Fatalln("Can't dial the given address", err)

@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a89ab69-723c-4fa6-8dc6-ad99aec9ebe3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery/param/request.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/tcpserver/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/tcpserver/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
