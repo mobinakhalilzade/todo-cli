@@ -3,15 +3,12 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"go/delivery/param"
 	"go/repository/memorystore"
 	"go/service/task"
 	"log"
 	"net"
 )
-
-type Request struct {
-	command string
-}
 
 func main() {
 	const (
@@ -52,24 +49,24 @@ func main() {
 		fmt.Printf("client address: %s,numberOfReadBytes:%d,data:%s\n ",
 			connection.RemoteAddr(), numberOfReadBytes, string(rawRequest))
 
-		req := &Request{}
-		if uErr := json.Unmarshal(rawRequest, req); uErr != nil {
+		req := &param.Request{}
+		if uErr := json.Unmarshal(rawRequest[:numberOfReadBytes], req); uErr != nil {
 			log.Println("Bad Request", uErr)
 
 			continue
 		}
 
-		switch req.command {
+		switch req.Command {
 		case "create-task":
 			response, cErr := taskService.Create(task.CreateRequest{
-				Title:               "",
-				DueDate:             "",
-				CategoryId:          0,
+				Title:               req.CreateTaskRequest.Title,
+				DueDate:             req.CreateTaskRequest.DueDate,
+				CategoryId:          req.CreateTaskRequest.CategoryId,
 				AuthenticatedUserId: 0,
 			})
 
 			if cErr != nil {
-				_, wErr := connection.Write([]byte("Your message received"))
+				_, wErr := connection.Write([]byte(cErr.Error()))
 
 				if wErr != nil {
 					log.Println("Can't write data to connection", wErr)
